@@ -1,4 +1,4 @@
-package problems
+package arraystring
 
 func maxProfit(prices []int) int {
 	buy := 100001 // 入力の最大+1

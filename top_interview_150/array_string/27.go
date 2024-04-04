@@ -1,4 +1,4 @@
-package problems
+package arraystring
 
 // valと等しくない要素の数を返す
 func removeElement(nums []int, val int) int {

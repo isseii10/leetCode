@@ -1,4 +1,4 @@
-package problems
+package arraystring
 
 func lengthOfLastWord(s string) int {
 	count := 0

@@ -1,4 +1,4 @@
-package problems
+package arraystring
 
 // in-place
 // numsは広義単調増加 ここ重要、つまり重複しているときはその数字は連続して現れる

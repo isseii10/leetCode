@@ -1,4 +1,4 @@
-package problems
+package arraystring
 
 // nums1を書き換える
 // nums1はすでにm+nのlength (m以上は0埋めされている)

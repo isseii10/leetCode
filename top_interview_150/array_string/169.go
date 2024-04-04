@@ -1,4 +1,4 @@
-package problems
+package arraystring
 
 // len(nums)/2 以上現れる数字を返す
 
