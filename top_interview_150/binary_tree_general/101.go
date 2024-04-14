@@ -1,6 +1,7 @@
 package binarytreegeneral
 
 // 103,226を使った回答
+// 元のtreeを破壊しているのであんまりよくない
 func isSymmetric(root *TreeNode) bool {
 	leftInv, right := invertTree(root.Left), root.Right
 	return isSameTree(leftInv, right)
