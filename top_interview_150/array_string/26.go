@@ -38,31 +38,18 @@ func removeDuplicates(nums []int) int {
 }
 
 // 早い回答
-// 尺取法
-// lとrの間はかぶっていることが分かっている数字になるようにする
-// lより前はuniqueなのが保たれるようにする
-func removeDuplicates2(nums []int) int {
-	n := len(nums)
-	r := 0
-	ans := n // 既に全てuniqueな時
-	for l := 0; l < n-1; l++ {
-		for r < n {
-			if nums[l] != nums[r] {
-				break
-			}
-			r++
-		}
-		if r == n {
-			ans = l + 1
-			break
-		}
-		nums[l+1] = nums[r]
-
-		if r == l {
-			r++
+// 二つのポインタを走査する
+func removeDuplicates_2(nums []int) int {
+	slow := 0
+	for fast := 1; fast < len(nums); fast++ {
+		if nums[slow] != nums[fast] {
+			// もしslow = fast + 1の場合でここに入った時は、nums[slow]は重複していない。
+			// それ以外の場合はslow以降が重複しているので、incrementしてnums[fast]を入れてあげる
+			slow++
+			nums[slow] = nums[fast]
 		}
 	}
-	return ans
+	return slow + 1
 }
 
 // 0,0,1,1,1,2,2,3,3,4
