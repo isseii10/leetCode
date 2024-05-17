@@ -25,8 +25,8 @@ func Test_removeDuplicates2(t *testing.T) {
 		{
 			name:     "case 2",
 			args:     args{nums: []int{0, 0, 1, 1, 1, 1, 2, 3, 3}},
-			want:     5,
-			wantNums: []int{0, 0, 1, 1, 2, 3},
+			want:     7,
+			wantNums: []int{0, 0, 1, 1, 2, 3, 3},
 		},
 	}
 	for _, tt := range tests {
