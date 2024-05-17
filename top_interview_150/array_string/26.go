@@ -52,48 +52,14 @@ func removeDuplicates_2(nums []int) int {
 	return slow + 1
 }
 
-// 0,0,1,1,1,2,2,3,3,4
-// l
-// r
-//
-// // 1loop終わり
-// 0,0,1,1,1,2,2,3,3,4
-// l
-//   r
-//
-// // 2loop終わり(違うの出てきた)
-// 0,0,1,1,1,2,2,3,3,4
-// l
-//     r
-//
-// // 3loop終わり
-// 0,1,1,1,1,2,2,3,3,4
-//   l
-//       r
-//
-// // 4loop終わり
-// 0,1,1,1,1,2,2,3,3,4
-//   l
-//         r
-//
-// // 5loop終わり(違うの出てきた)
-// 0,1,1,1,1,2,2,3,3,4
-//   l
-//           r
-//
-//
-// // 6loop終わり
-// 0,1,2,1,1,2,2,3,3,4
-//     l
-//             r
-//
-// // 7loop終わり
-// 0,1,2,1,1,2,2,3,3,4
-//     l
-//               r
-//
-// // 7loop終わり
-// 0,1,2,1,1,2,2,3,3,4
-//     l
-//               r
-//
+func removeDuplicates_3(nums []int) int {
+	slow, fast := 0, 0
+	for fast < len(nums) {
+		if nums[slow] < nums[fast] {
+			slow++
+			nums[slow], nums[fast] = nums[fast], nums[slow]
+		}
+		fast++
+	}
+	return slow + 1
+}
