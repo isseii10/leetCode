@@ -15,7 +15,7 @@ func singleNumber(nums []int) int {
 }
 
 // xor
-func singleNumber2(nums []int) int {
+func singleNumber_2(nums []int) int {
 	ret := 0
 	for _, v := range nums {
 		ret ^= v
